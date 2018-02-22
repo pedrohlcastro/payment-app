@@ -10,7 +10,6 @@ import cors from 'cors';
 import path from 'path';
 import passport from 'passport';
 import fileUploader from 'express-fileupload';
-import compress from 'shrink-ray';
 import helmet from 'helmet';
 
 import configEnv from './config/envConfig';
@@ -22,20 +21,6 @@ import TransactionRoutes from './routes/TransactionRoutes';
 
 const app = express();
 
-//config gzip compress
-if (ENV != 'test'){
-    app.use(compress({
-        cache: (req, res) => {
-            return true;
-        },
-        brotli: {
-            quality: 6
-        },
-        zlib: {
-            quality: 6
-        }
-    }));
-}
 app.use(morgan(ENV));
 app.use(cors());
 app.use(passport.initialize());

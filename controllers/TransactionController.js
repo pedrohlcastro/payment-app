@@ -13,7 +13,7 @@ class TransactionController{
         }
         let transactionRec = {
             from: from._id,
-            value: value 
+            value: value
         }
         return new Promise((resolve, reject) => {
             db.get(from._id, (err, data) => {
@@ -57,7 +57,6 @@ class TransactionController{
 
     getStatement(user){
         return new Promise((resolve, reject) => {
-            console.log(user);
             db.get(user, (err, body) => {
                 if(err) {
                     reject({status: 500, msg: 'DB Error', err: err});
@@ -71,7 +70,6 @@ class TransactionController{
     getListOfClients(user){
         return new Promise((resolve, reject) => {
             db.list(async (err, data) => {
-                console.log(err, data);
                 if(err){
                     reject({status: 500, msg: 'DB Error', err: err});
                 } else {
