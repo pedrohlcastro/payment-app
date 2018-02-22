@@ -1,0 +1,78 @@
+/* You can add global styles to this file, and also import other style files */
+
+//@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import '/assets/sass/_custom-theme.scss';
+@import '/assets/sass/main.scss';
+
+// Spinner plane - Loader
+@mixin rotateKeyFrames($fristStep, $secondStep, $thirdStep) {
+    @-webkit-keyframes rotateplane {
+        0% { -webkit-transform: $fristStep }
+        50% { -webkit-transform: $secondStep }
+        100% { -webkit-transform: $thirdStep }
+    }
+    @-webkit-keyframes rotateplane {
+        0% { -webkit-transform: $fristStep }
+        50% { -webkit-transform: $secondStep }
+        100% { -webkit-transform: $thirdStep }
+    }
+    @-moz-keyframes rotateplane {
+        0% { -webkit-transform: $fristStep }
+        50% { -webkit-transform: $secondStep }
+        100% { -webkit-transform: $thirdStep }
+    }
+    @-o-keyframes rotateplane {
+        0% { -webkit-transform: $fristStep }
+        50% { -webkit-transform: $secondStep }
+        100% { -webkit-transform: $thirdStep }
+    }
+    @keyframes rotateplane {
+        0% { -webkit-transform: $fristStep }
+        50% { -webkit-transform: $secondStep }
+        100% { -webkit-transform: $thirdStep }
+    }
+}
+
+* {
+    font-family: 'Open Sans', sans-serif;
+}
+
+// Loader - Spinner
+.loader{
+    margin-top: 50px;
+    .spinner {
+        width: 40px;
+        height: 40px;
+        background-color: $primary-color;
+        margin: 100px auto;
+        @include animation(rotateplane 1.2s infinite ease-in-out);
+    }
+    @include rotateKeyFrames(perspective(120px), perspective(120px) rotateY(180deg), perspective(120px) rotateY(180deg)  rotateX(180deg) );
+}
+
+// titles
+.title-card{
+    text-align: center;
+    font-size: 35pt;
+    color: rgba(0,0,0,.8);
+    margin-top: 20pt;
+    margin-bottom: 15pt;
+}
+
+.mat-tab-body-wrapper {
+  flex-grow: 1;
+  background:white;
+}
+
+.mat-tab-body-content {
+  position: relative;
+  width:100%;
+  z-index:-1;
+
+  /*top: 0;*/
+  /*bottom: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+}
+
+

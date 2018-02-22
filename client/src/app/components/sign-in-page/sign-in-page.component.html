@@ -1,0 +1,26 @@
+<div class="container center-card">
+    <div class="panel-body">
+        <form [formGroup]="signInForm" novalidate (ngSubmit)="signIn(signInForm.value, signInForm.valid)">
+            <div class="row">
+                <div class="input-field">
+                    <md-input-container class="input">
+                        <input mdInput [placeholder]=" 'signIn.email.title' | translate " class="mat-input" type="email" formControlName="email">
+                        <md-error *ngIf="signInForm.get('email').hasError('pattern')" [innerHTML]="'signIn.email.format-error' | translate"></md-error>
+                        <md-error *ngIf="signInForm.get('email').hasError('required')" [innerHTML]="'signIn.email.required-error' | translate"></md-error>
+                    </md-input-container>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field">
+                    <md-input-container class="input">
+                        <input mdInput [placeholder]=" 'signIn.password.title' | translate " class="mat-input" type="password" formControlName="password">
+                        <md-error *ngIf="signInForm.get('password').hasError('required')" [innerHTML]=" 'signIn.password.required-error' | translate "></md-error>
+                    </md-input-container>
+                </div>
+            </div>
+            <button md-button class="btn-login" type="submit" name="action"><i class="material-icons" fxShow.xs="true" fxHide="true">&#xE890;</i><span class="mat-button" fxHide.xs="true">{{ 'signIn.submit' | translate }}</span></button>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,6 @@
+@import '../assets/sass/main';
+@import '../../node_modules/ng2-drag-drop/style.css';
+
+md-tab > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {
+  color: #fff !important;
+}

@@ -1,0 +1,193 @@
+{
+    "system": {
+        "accessDeniedMsg" : "Você deve logar-se para acessar essa página",
+        "closeMsg": "Clique para fechar",
+        "accessDeniedUserType": "Você não tem permissão para acessar esta página"
+    },
+    "nav": {
+        "home": "Home",
+        "explore": "Explorar",
+        "enterprise": "Empreendimentos",
+        "signIn": "Entrar",
+        "signUp": "Cadastrar-se",
+        "profile": "Perfil",
+        "logout": "Logout",
+        "admin": "Area Administrativa"
+    },
+    "signIn": {
+        "messages": {
+            "success": "Login efetuado com sucesso",
+            "error": "E-mail ou senha inválidos",
+            "closeMsg": "Clique para fechar"
+        },
+        "email": {
+            "title": "E-mail",
+            "format-error": "Entre com um e-mail válido",
+            "required-error": "E-mail é <strong>obrigatório</strong>"
+        },
+        "password": {
+            "title": "Senha",
+            "required-error": "A Senha é <strong>obrigatória</strong>"
+        },
+        "submit": "Entrar"
+    },
+    "signUp": {
+        "title": "Cadastre-se",
+        "messages": {
+            "success": {
+                "successMsg": "Conta Criada com sucesso",
+                "infoMsg": "Efetue Login abaixo"
+            },
+            "error" : {
+                "email": "E-mail já cadastrado",
+                "default": {
+                    "message": "Não foi possível criar usário",
+                    "help": "Verifique os campos"
+                }
+            },
+            "closeMsg": "Clique para fechar"
+        },
+        "name": {
+            "title":"Nome",
+            "error": "Entre com seu nome"
+        },
+        "company": {
+            "title": "Empresa",
+            "error": "Entre com o nome da sua empresa"
+        },
+        "email": {
+            "title":"E-mail",
+            "error": "Entre com um e-mail válido"
+        },
+        "phone": {
+            "title":"Telefone",
+            "error": "Entre com um número válido: (99)99999-9999 ou (99)9999-9999"
+        },
+        "password": {
+            "title": "Senha",
+            "error": "Sua senha deve ter 8 caracteres"
+        },
+        "submit": "Criar Conta"
+    },
+    "processes" : {
+        "title": "Unidades Operacionais",
+        "add-button": "Nova Unidade",
+        "search": "Pesquisar",
+        "edit": "Editar",
+        "share": "Compartilhar",
+        "delete": "Excluir",
+        "processes": "Processos"
+    },
+    "process-content" : {
+      "project": "Meus empreendimentos",
+      "study": "Estudos",
+      "process": "Processos",
+      "add": "+ Adicionar Estudos",
+      "edit": "Editar",
+      "delete": "Excluir",
+      "alteration":"Última alteração",
+      "phase":"Fase",
+      "stage":"Estágio"
+  },
+  "profile" : {
+    "edit": "Editar Perfil",
+    "cancel": "Cancelar",
+    "messages": {
+        "successMsg": "Usuário atualizada com sucesso",
+        "error" : {
+            "errorMsg": "Não foi possível alterar usário",
+            "infoMsg": "Verifique os campos"
+        },
+        "closeMsg": "Clique para fechar",
+        "cancelMsg": "Atualização de Usuário cancelada"
+    },
+    "name": {
+      "title":"Nome",
+      "error": "Entre com seu nome"
+    },
+    "email": {
+      "title": "E-mail",
+      "error": "Entre com um e-mail válido"
+    },
+    "company": {
+      "title": "Empresa",
+      "error": "Entre com o nome da sua empresa"
+    },
+    "phone": {
+      "title":"Telefone",
+      "error": "Entre com um número válido: (99)99999-9999 ou (99)9999-9999"
+    }
+  },
+  "admin-area" : {
+    "inputGeo": "Importar KML/Geojson da Área",
+    "file": "Escolha um Arquivo",
+    "type": "Tipo de Área",
+    "studyType": "Tipo de Estudo",
+    "inputEia": "Importar EIA da Área",
+    "create": "Criar Área ",
+    "messages": {
+      "successMsg": "Área criada",
+      "error" : {
+          "errorMsg": "Não foi possivel criar a área",
+          "infoMsg": "Verifique os campos"
+      },
+      "closeMsg": "Clique para fechar"
+
+    }
+  },
+  "admin-layer" : {
+    "inputGeo": "Importar KML/Geojson",
+    "file": "Escolha um Arquivo",
+    "type": "Tipo",
+    "subtype": "Subtipo",
+    "create": "Criar Camada ",
+    "messages": {
+      "successMsg": "Camada criada",
+      "error" : {
+          "errorMsg": "Não foi possivel criar a Camada",
+          "infoMsg": "Verifique os campos"
+      },
+      "closeMsg": "Clique para fechar"
+    }
+  },
+
+  "enterprise" : {
+    "edit": "Editar Empreendimento",
+    "create": "Criar Empreendimento",
+    "back": "Meus Empreendimentos",
+    "messages": {
+        "updateSuccessMsg": "Empreendimento atualizado com sucesso",
+        "updateError" : {
+            "errorMsg": "Não foi possivel atualizar o Empreendimento",
+            "infoMsg": "Verifique os Campos"
+        },
+        "createSuccessMsg": "Empreendimento criado com sucesso",
+        "createError" : {
+            "errorMsg": "Não foi possivel criar o Empreendimento",
+            "infoMsg": "Verifique os Campos"
+        },
+        "closeMsg": "Clique para fechar"
+    },
+    "name": {
+      "title":"Nome",
+      "error": "Entre com seu nome"
+    },
+    "type":{
+      "title": "Tipo",
+      "error": "Entre com o tipo do Empreendimento"
+    },
+    "address": {
+      "title": "Endereço",
+      "error": "Entre com o endereço do Empreendimento"
+    },
+    "company": {
+      "title":"Empresa",
+      "error": "Entre com o nome da empresa"
+    },
+
+    "size": {
+      "title":"Tamanho",
+      "error": "Entre com o tamanho do empreendimento"
+    }
+  }
+}

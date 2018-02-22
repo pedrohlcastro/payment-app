@@ -1,0 +1,45 @@
+<form [formGroup]="signUpForm" novalidate (ngSubmit)="signUp(signUpForm.value, signUpForm.valid)">
+  <div class="container">
+    <md-card class="container-card">
+      <div class="title-card">
+        <h1 class="mat-display-1">{{ 'signUp.title' | translate }}</h1>
+      </div>
+      <div class="input-field">
+        <md-input-container class="input" >
+          <input mdInput [placeholder]=" 'signUp.name.title' | translate " class="mat-input" required formControlName="name">
+          <md-error *ngIf="signUpForm.get('name').hasError('required')" fxHide.xs="true" [innerHTML]=" 'signUp.name.error' | translate | safe : 'html'"></md-error>
+        </md-input-container>
+      </div>
+      <div class="input-field">
+        <md-input-container class="input">
+          <input mdInput [placeholder]=" 'signUp.company.title' | translate "  class="mat-input" required formControlName="company">
+          <md-error *ngIf="signUpForm.get('company').hasError('required')" fxHide.xs="true" [innerHTML]=" 'signUp.company.error' | translate | safe : 'html'"></md-error>
+        </md-input-container>
+      </div>
+      <div class="input-field">
+        <md-input-container class="input">
+          <input mdInput type="text" (keypress)="phoneInputMask()" [placeholder]=" 'signUp.phone.title' | translate " class="mat-input" required formControlName="phone">
+          <md-error *ngIf="signUpForm.get('phone').hasError('pattern') ||
+                           signUpForm.get('phone').hasError('required')" fxHide.xs="true" [innerHTML]=" 'signUp.phone.error' | translate | safe : 'html' "></md-error>
+        </md-input-container>
+      </div>
+      <div class="input-field">
+          <md-input-container class="input">
+            <input mdInput [placeholder]=" 'signUp.email.title' | translate " type="email" class="mat-input" required formControlName="email">
+            <md-error *ngIf="signUpForm.get('email').hasError('pattern') ||
+                             signUpForm.get('phone').hasError('required')" fxHide.xs="true" [innerHTML]=" 'signUp.email.error' | translate | safe : 'html'"></md-error>
+          </md-input-container>
+        </div>
+      <div class="input-field">
+        <md-input-container class="input">
+          <input mdInput [placeholder]=" 'signUp.password.title' | translate " type="password" required class="mat-input" formControlName="password">
+          <md-error *ngIf="signUpForm.get('password').hasError('minlength')
+                      || signUpForm.get('password').hasError('required')" [innerHTML]=" 'signUp.password.error'| translate | safe : 'html' "></md-error>
+        </md-input-container>
+      </div>
+      <div class="register-button">
+        <button md-raised-button class="btn-register" type="submit"><i class="material-icons" fxShow.xs="true" fxHide="true">&#xE853;</i><span fxHide.xs="true" class="mat-button">{{ 'signUp.submit' | translate }}</span></button>
+      </div>
+    </md-card>
+  </div>
+</form>

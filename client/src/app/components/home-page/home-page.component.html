@@ -1,0 +1,12 @@
+<div class="container">
+    <md-input-container>
+        <input mdInput placeholder="Valor p/ tranferir" [(ngModel)]="value" [ngModelOptions]="{standalone: true}">
+    </md-input-container>
+    <md-list *ngFor="let item of customers; let i = index">
+    <md-list-item> 
+        <md-card> 
+        {{ item.id }} <i class="material-icons" (click)="sendMoney(i)">send</i> 
+        </md-card>
+    </md-list-item>
+    </md-list>
+</div>

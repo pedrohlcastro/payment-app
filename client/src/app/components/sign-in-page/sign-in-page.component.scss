@@ -1,0 +1,46 @@
+@import '../../../assets/sass/main';
+
+.container-card{
+    position: relative;
+    left:27%;
+    top:12%;
+    width:45%;
+    overflow:auto;
+}
+
+.container-card:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+
+.logo-licentia{
+    margin-top: 35px;
+    margin-bottom: 35px;
+    img{
+        width: 10vw;
+        height:20vh;
+    }
+}
+
+.input {
+    width:95%;
+    padding: 10px 0px 0px 20px;
+    font-size: 14pt;
+}
+
+.check-pass{
+    margin-top: 12pt;
+}
+
+.checkbox-password{
+    font-size: 10pt;
+    padding: 10px 0px 0px 20px;
+    color: rgba(0,0,0,.4);
+}
+
+.btn-login{
+    margin-top: 2%;
+    left: 22%;
+    width: 50%;
+    background: $secondary-color;
+    color: white;
+}

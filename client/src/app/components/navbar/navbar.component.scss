@@ -1,0 +1,42 @@
+@import '../../../assets/sass/main';
+
+@mixin highlightNav() {
+    border-bottom: 5px solid $primary-color-light;
+    color: $primary-color-dark;
+}
+
+nav {
+    color: $primary-color-dark;
+    background-color: white;
+    border-bottom: 1px solid $primary-color;
+    border-radius: 0;
+    width:100%;
+
+    img{
+      width:10vw;
+    }
+    .logo-xs{
+      width:8vw;
+      height: 3vh;
+
+    }
+
+    li {
+        @include transition(all .25s ease-in-out);
+        a {
+            font-family: 'Abel', sans-serif;
+            color: $primary-color-dark;
+            cursor: pointer;
+        }
+        &:hover {
+            @include transform(scale(1.05));
+            @include highlightNav();
+        }
+    }
+    .navbar-brand {
+        margin-right: 20%;
+    }
+    .active {
+        @include highlightNav();
+    }
+}

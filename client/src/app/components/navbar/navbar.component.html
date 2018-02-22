@@ -1,0 +1,39 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']">
+                Bank
+            </a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right" >
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:true}">
+                    <a *ngIf="isAuthenticated" [routerLink]="['/home']" class="mat-body-1"><strong>Home</strong> </a>
+                </li>
+
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}">
+                    <a *ngIf="isAuthenticated" [routerLink]="['/statement']" class="mat-body-1"><strong>Extrato</strong> </a>
+                </li>
+
+                <li [routerLinkActive]="['active']" [routerLinkActiveOptions]="{exact:false}">
+                    <a *ngIf="!isAuthenticated; else notLoggedIn" [routerLink]="['/']" class="mat-body-1"> <strong>Logar-se</strong></a>
+                </li>
+
+                <ng-template #notLoggedIn>
+                  <a (click)="onLogout()" ><strong>Sair</strong></a>
+                </ng-template>
+            </ul>
+        </div>
+    </div>
+
+</nav>
+

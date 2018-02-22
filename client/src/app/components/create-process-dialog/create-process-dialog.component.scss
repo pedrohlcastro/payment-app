@@ -1,0 +1,82 @@
+@import './../../../assets/sass/main';
+.header{
+  width: 40.2vw;
+  background: $secondary-color;
+  box-shadow: 5px 5px 5px #888888;
+  color:white;
+  margin-top:-45px;
+  margin-left:-35px;
+  position:relative;
+  h1{
+    font-size:20pt;
+    padding: 40px;
+  }
+}
+
+h1{
+  position:relative;
+  font-size:20pt;
+  padding: 5px;
+}
+
+.toolbar h1{
+  color:white;
+  font-weight: bold;
+  text-shadow: 3px 3px 3px grey;
+}
+
+h2{
+  margin-top: 6px;
+  margin-left:25px;
+  font-size: 8pt;
+  color:white;
+  text-shadow: -1px -1px 1px grey;
+
+}
+.toolbar{
+  flex: 1 1 auto;
+  position: relative;
+}
+.back-btn{
+  margin-top:40px;
+  height:20%;
+  .material-icons{
+    color:white;
+    float:left;
+  }
+
+}
+
+  span{
+    font-size: 20pt;
+    padding:15px;
+    color: rgba(0,0,0,.8);
+  }
+  .input-field{
+    padding:1px 10px 10px 10px;
+    width: 100%;
+    margin-top:15px;
+    .input{
+      width:100%;
+      margin-top:15px;
+    }
+  }
+  .select-size{
+    padding:5px;
+    width: 150dp;
+
+  }
+  .btn-container{
+    position: relative;
+    float:right;
+    button{
+      background: $secondary-color;
+      color:white;
+      margin-top:3%;
+      height: 36dp;
+    }
+    .btn-cancel{
+      background: #d32f2f;
+    }
+}
+

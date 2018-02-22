@@ -1,0 +1,30 @@
+<div class= "header">
+    <md-toolbar class="toolbar" color="accent">
+      <h1 *ngIf ="!process">Criar novo Processo</h1>
+      <h1 *ngIf ="process">Editar Processo</h1>
+    </md-toolbar>
+</div>
+ <div class="body">
+    <form [formGroup]="editForm" *ngIf="processEditControl" >
+        <div class="input-field">
+            <md-input-container class="input" >
+              <input mdInput placeholder="Nome do Processo" type="name" required formControlName="name" class="mat-input">
+            </md-input-container>
+            <md-select placeholder="Status"class= "select-size" [(ngModel)]= "selectStatus"  [ngModelOptions]="{standalone: true}" required>
+              <md-option *ngFor =" let status of statusProcess" [value] ="status.value" class="mat-input" >{{status.viewValue}}</md-option>
+            </md-select>
+            <br fxHide="true" fxShow.xs="true">
+            <md-select placeholder="Fase" class="select-size" [(ngModel)]= "selectPhase"  [ngModelOptions]="{standalone: true}" required>
+              <md-option *ngFor =" let phase of phaseProcess" [value] ="phase.value" class="mat-input">{{phase.viewValue}}</md-option>
+
+            </md-select>
+        </div>
+
+        <div class="btn-container">
+          <button md-raised-button class="btn-cancel" type ="button" (click) ="closeDialog()">Cancelar</button>
+          <button md-raised-button class="btn-create" *ngIf ="!process" type="submit" (click)= "createProcess(editForm.value, editForm.valid)" >Criar Processo</button>
+          <button md-raised-button class="btn-create" *ngIf="process" (click)= "updateProcess(editForm.value, editForm.valid)" >Editar Processo</button>
+
+        </div>
+    </form>
+  </div>

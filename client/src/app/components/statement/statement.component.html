@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="saldo">
+      <b>Saldo: </b> {{value}}
+    </div>
+    <div *ngIf="history">
+        <md-list *ngFor="let item of history">
+          <md-list-item> 
+              <md-card [ngClass]="{'red-corner': item.value < 0, 'green-corner': item.value >= 0}">
+                Tranferência para:  <b>{{item.to}}</b> <span>{{ item.value }}</span> 
+              </md-card>
+          </md-list-item>
+        </md-list>
+    </div>
+      
+</div>
