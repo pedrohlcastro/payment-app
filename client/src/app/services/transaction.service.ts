@@ -49,4 +49,19 @@ export class TransactionService {
               return err.json();
             });
   }
+
+  sendMoneyToBlockChain(to, value) {
+    const blockChainURL = 'http://localhost:3000';
+    const body = {
+      '$class': 'org.acme.sample.SendMoney',
+      'fromClient': this.authService.getUserEmail(),
+      'toClient': to.id,
+      'newValue': value.toString()
+    };
+    console.log(body);
+    return this.http.post(`${blockChainURL}/api/SendMoney`, body)
+              .map((res) => {
+                return res.json();
+              });
+  }
 }

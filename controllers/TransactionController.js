@@ -2,6 +2,9 @@
 
 import db from '../config/db';
 import async from 'async';
+import guid from 'uid';
+import request from 'request';
+//import urlencode from 'urlencode';
 
 class TransactionController{
     sendMoney(from, to, value){

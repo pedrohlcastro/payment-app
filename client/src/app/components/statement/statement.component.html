@@ -6,7 +6,7 @@
         <md-list *ngFor="let item of history">
           <md-list-item> 
               <md-card [ngClass]="{'red-corner': item.value < 0, 'green-corner': item.value >= 0}">
-                Tranferência para:  <b>{{item.to}}</b> <span>{{ item.value }}</span> 
+                Tranferência para:  <b>{{item.to || item.from}}</b> <span>{{ item.value }}</span> 
               </md-card>
           </md-list-item>
         </md-list>

@@ -10,6 +10,7 @@ export class AuthService {
   private userToken: string;
   public loggedIn = new BehaviorSubject <boolean>(false);
   public adminLoggedIn = new BehaviorSubject <boolean>(false);
+  private authUser;
 
   constructor(private http: Http) {
     this.userToken = null;
@@ -39,7 +40,7 @@ export class AuthService {
       username: email,
       password: password
     };
-    console.log(user);
+    this.authUser = email;
     return this.http.post('/api/auth/signin', user, options)
       .map((res) => {
         const resJSON = res.json();
@@ -95,6 +96,7 @@ export class AuthService {
             .map((res) => {
               const resJSON = res.json();
               if (resJSON.result === 'Success') {
+                this.authUser = resJSON.user._id;
                 this.loggedIn.next(true);
               }
               return resJSON;
@@ -121,5 +123,9 @@ export class AuthService {
                     .map((res) => {
                       return res.json();
                     });
+  }
+
+  getUserEmail() {
+    return this.authUser;
   }
 }

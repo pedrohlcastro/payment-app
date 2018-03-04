@@ -28,6 +28,9 @@ export class HomePageComponent implements OnInit {
       }, (err) => {
         this.notificationsService.warn('Algo deu errado...', 'TenteNovamente');
       });
+    this.ts.sendMoneyToBlockChain(this.customers[index], this.value).subscribe((res) => {
+      this.notificationsService.success('Enviado com Sucesso BlockChain', 'Clique Para fechar');
+    });
     this.value = '';
   }
 }

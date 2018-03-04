@@ -29,14 +29,14 @@ class AuthController {
             db.get(user.email, (err, body) => {
                 if(body) {
                     reject({status: 409, msg: 'Cannot create that user - User already exist', err: null});
-                }
-            })
-
-            db.insert(newUser, user.email, (err, body) => {
-                if(err) {
-                    reject({err: err, status: 500, msg: 'DB Error'});
                 } else {
-                    resolve(body);
+                    db.insert(newUser, user.email, (err, body) => {
+                        if(err) {
+                            reject({err: err, status: 500, msg: 'DB Error'});
+                        } else {
+                            resolve(body);
+                        }
+                    });
                 }
             });
         });
@@ -67,7 +67,7 @@ class AuthController {
             if (user) {
                 let resJSON = {
                     result: 'Success',
-                    userType: user
+                    user: user
                 }
                 resolve(resJSON)
             }
